@@ -4,6 +4,7 @@
   left:0px;
   opacity: 100;
 }
+
 .nav-wrapper .topmenu .brand-logo{
   position: absolute;
   left: 55px;
@@ -16,5 +17,10 @@
   position: relative;
   bottom: -100px;
   font-style: italic
-  
+}
+
+.book .card-content .btn{
+  position: absolute;
+  right: 20px;
+  bottom: 35px;
 }

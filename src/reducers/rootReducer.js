@@ -65,7 +65,25 @@ const initState = {
 
 
 const rootReducer = (state = initState, action) => {
-    return state;
+  switch(action.type){
+    case "DELETE_BOOK":
+      let newBooks = state.books.filter(book => {
+        return action.id !== book.id
+      })
+      return{
+        ...state,
+        books: newBooks
+      };
+    case "ADD_BOOK":
+      return{
+        ...state,
+        books: state.books.concat([state.bookInput]),
+        bookInput: ''
+      }
+      
+    default:
+      return state;
+  }
 }
 
 export default rootReducer
