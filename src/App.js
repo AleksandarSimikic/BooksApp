@@ -3,8 +3,10 @@ import Home from './components/Home'
 import TopMenu from './components/TopMenu'
 import Help from './components/Help'
 import About from './components/About'
+import AddBook from './components/AddBook'
 import {Route, BrowserRouter, Switch } from 'react-router-dom'
 import Books from './components/Books'
+
 
 class App extends Component {
   
@@ -17,6 +19,7 @@ class App extends Component {
             <Route exact path='/' component={Home}/>
             <Route path='/about' component={About}/>
             <Route path='/help' component={Help}/>
+            <Route path='/addbook' component={AddBook}/>
             <Route path ='/:book_id' component={Books}/>
           </Switch>
         </div>

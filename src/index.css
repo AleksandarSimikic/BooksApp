@@ -24,3 +24,13 @@
   right: 20px;
   bottom: 35px;
 }
+
+.addbook {
+  position: absoulte;
+  border: 12px solid;
+  border-color: darkcyan;
+  border-radius: 10px;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  
+}

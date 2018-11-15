@@ -1,11 +1,10 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
-import { addBook } from '../actions/bookAction';
 
 class Home extends Component {
-    
     render(){
+        console.log(this.props.books)
         const { books } = this.props
         const bookList = books.length ? (
         books.map(book => {
@@ -43,11 +42,9 @@ class Home extends Component {
         )
     }
 }
-const mapStateToProps = (state) => {
-    return{
+const mapStateToProps = (state) => ({
         books: state.books
-    }
-}
+});
 
 
 export default connect(mapStateToProps)(Home)

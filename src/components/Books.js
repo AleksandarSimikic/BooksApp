@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { deleteBook, addBook } from '../actions/bookAction';
+import { deleteBook } from '../actions/bookAction';
 
 class Books extends Component {
 
-    handleClick = () => {
+    handleClick = (e) => {
         this.props.deleteBook(this.props.book.id);
         this.props.history.push('/');
     }
@@ -17,7 +17,7 @@ class Books extends Component {
                     <p>Author: {this.props.book.author}</p>  
                     <button className="btn red" onClick={this.handleClick}>
                         Delete
-                    </button>     
+                    </button>
                 </div>
             </div> 
         ) : (
@@ -34,7 +34,6 @@ class Books extends Component {
 
 const mapStateToProps = (state, ownProps) => {
     let id = parseInt(ownProps.match.params.book_id);
-    
     return{
         book: state.books.find(book => book.id === id)
     }

@@ -10,8 +10,9 @@ const TopMenu = () => {
                 <img src={Logo} alt="logo"/>
                 <ul className="right">
                     <li><NavLink exact to="/">Home</NavLink></li>
-                    <li><NavLink to="/Help">Help</NavLink></li>
+                    <li><NavLink to="/help">Help</NavLink></li>
                     <li><NavLink to="/about">About</NavLink></li>
+                    <li><NavLink to="/addbook">+New Book</NavLink></li>
                 </ul>
             </div>
         </nav>

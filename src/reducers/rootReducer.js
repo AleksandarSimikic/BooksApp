@@ -1,3 +1,4 @@
+import update from 'react-addons-update'
 const initState = {
     books: [
         {
@@ -75,14 +76,21 @@ const rootReducer = (state = initState, action) => {
         books: newBooks
       };
     case "ADD_BOOK":
+      let newBook = [action.book.book];
+      console.log(action)
+      console.log(action.book)
+      console.log(action.book.book)
+      //console.log(newBook);
+      let newState = update(state.books, {$push: newBook})
+     // console.log(newState)
+      //console.log(state);
       return{
         ...state,
-        books: state.books.concat([state.bookInput]),
-        bookInput: ''
-      }
-      
-    default:
+        books: newState
+      };  
+     default:
       return state;
+      
   }
 }
 
