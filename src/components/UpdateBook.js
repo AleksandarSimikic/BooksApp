@@ -28,14 +28,13 @@ class UpdateBook extends Component {
       book: this.state.book,
     });
     this.props.history.push('/');
-
   }
 
   render() {
     return (
       <div className="container center updateBook">
         UPDATE NEW BOOK
-                <form onSubmit={this.handleSubmit}>
+        <form onSubmit={this.handleSubmit}>
           <label htmlFor="author">Author:</label>
           <input type="text" id="author" value={this.state.book.author} onChange={this.handleChange} />
           <label htmlFor="title">Title:</label>

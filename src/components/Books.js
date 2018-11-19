@@ -19,16 +19,15 @@ class Books extends Component {
           <p>Author: {this.props.book.author}</p>
           <button className="btn red delete" onClick={this.handleClick}>
             Delete
-                    </button>
+          </button>
           <NavLink className="btn purple update" role="button" to={"/" + this.props.book.id + "/update"}>
             Update
-                    </NavLink>
+          </NavLink>
         </div>
       </div>
     ) : (
         <div className="center">No such books with selected id</div>
-      );
-
+        );
     return (
       <div className="container">
         {book}

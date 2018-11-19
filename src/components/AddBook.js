@@ -7,16 +7,13 @@ class AddBook extends Component {
     book: {
       userId: Math.round(Math.random() * 100),
       id: Math.round(Math.random() * 100),
-
       title: '',
       author: '',
-
     }
   }
 
   handleSubmit = e => {
     e.preventDefault();
-
     this.props.addBook({
       book: this.state.book,
     });
@@ -26,7 +23,6 @@ class AddBook extends Component {
       book: {
         userId: Math.round(Math.random() * 100),
         id: Math.round(Math.random() * 100),
-
         title: '',
         author: '',
       }
@@ -58,7 +54,6 @@ class AddBook extends Component {
 
   render() {
     console.log(this.props);
-
     return (
       <div className="container center addbook">
         ADD NEW BOOK
@@ -72,7 +67,6 @@ class AddBook extends Component {
       </div>
     );
   }
-
 }
 
 const mapStateToProps = (state) => {

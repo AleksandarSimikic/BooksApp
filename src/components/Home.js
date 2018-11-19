@@ -21,7 +21,7 @@ class Home extends Component {
       })
     ) : (
         <div className="center">No books to show</div>
-      );
+        );
 
     return (
       <div className="shit">
@@ -33,12 +33,10 @@ class Home extends Component {
           <div className="footer-copyright blue darken-5">
             <div>
               © 2018 Copyright Text authored by Aleksandar Simikic
-                            </div>
+            </div>
           </div>
-
         </footer>
       </div>
-
     )
   }
 }
