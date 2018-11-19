@@ -9,13 +9,13 @@ import rootReducer from './reducers/rootReducer'
 import thunk from 'redux-thunk'
 
 const confirmMidd = store => next => action => {
-    if(action.shouldConfirm){
-        if(window.confirm("Are you sure?")){
-            next(action);
-        }
-    }else{
-        next(action);
+  if (action.shouldConfirm) {
+    if (window.confirm("Are you sure?")) {
+      next(action);
     }
+  } else {
+    next(action);
+  }
 }
 
 const store = createStore(rootReducer, applyMiddleware(thunk, confirmMidd));

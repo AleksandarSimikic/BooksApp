@@ -77,10 +77,10 @@ const rootReducer = (state = initState, action) => {
       };
     case "ADD_BOOK":
       let newBook = [action.book.book];
-      let newState = update(state.books, {$push: newBook})
+      let newState = update(state.books, {$push: newBook}) // koristimo push metodu iz funkcije "update" da dodamo novi objekat u niz
       return{
         ...state,
-        books: newState
+        books: newState // vracamo novo stanje sa novim objektom
       };
     case "UPDATE_BOOK":
       let updatedBook = action.book.book // azurirana knjiga iz akcije update_book

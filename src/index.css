@@ -19,6 +19,7 @@
   font-style: italic
 }
 
+
 .book .card-content .btn.delete{
   position: absolute;
   right: 20px;
@@ -34,7 +35,7 @@
 }
 
 .addbook {
-  position: absoulte;
+  position: absolute;
   border: 12px solid;
   border-color: darkcyan;
   border-radius: 10px;
@@ -43,7 +44,7 @@
   
 }
 .updateBook {
-  position: absoulte;
+  position: absolute;
   border: 12px solid;
   border-color: darkcyan;
   border-radius: 10px;
