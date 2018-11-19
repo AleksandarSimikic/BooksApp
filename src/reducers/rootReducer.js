@@ -77,18 +77,27 @@ const rootReducer = (state = initState, action) => {
       };
     case "ADD_BOOK":
       let newBook = [action.book.book];
-      console.log(action)
-      console.log(action.book)
-      console.log(action.book.book)
-      //console.log(newBook);
       let newState = update(state.books, {$push: newBook})
-     // console.log(newState)
-      //console.log(state);
       return{
         ...state,
         books: newState
-      };  
-     default:
+      };
+    case "UPDATE_BOOK":
+      let updatedBook = action.book.book // azurirana knjiga iz akcije update_book
+      console.log(updatedBook)
+      let newUpBooks = state.books.map(book => { // koristimo map funkciju da mijenjamo element niza
+        /*if(book.id === updatedBook.id){
+          book = updatedBook;
+        }
+        return book;*/ //simple return
+        return book.id === updatedBook.id ? updatedBook : book //ako je uslov ispunjen, mijenjamo knjigu sa odgovarajucim id-jem sa azuriranom knjigom.
+      })
+      console.log(newUpBooks)
+      return{
+        ...state,
+        books: newUpBooks
+      }
+    default:
       return state;
       
   }

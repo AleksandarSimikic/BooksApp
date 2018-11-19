@@ -19,10 +19,18 @@
   font-style: italic
 }
 
-.book .card-content .btn{
+.book .card-content .btn.delete{
   position: absolute;
   right: 20px;
-  bottom: 35px;
+  bottom: 10px;
+  width: 15%
+}
+
+.book .card-content .btn.update{
+  position: absolute;
+  right: 20px;
+  bottom: 50px;
+  width: 15%
 }
 
 .addbook {
@@ -33,4 +41,12 @@
   margin-top: 30px;
   margin-bottom: 15px;
   
+}
+.updateBook {
+  position: absoulte;
+  border: 12px solid;
+  border-color: darkcyan;
+  border-radius: 10px;
+  margin-top: 30px;
+  margin-bottom: 15px;
 }

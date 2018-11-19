@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { deleteBook } from '../actions/bookAction';
+import { NavLink } from 'react-router-dom'
+
 
 class Books extends Component {
 
@@ -15,9 +17,12 @@ class Books extends Component {
                 <div className="card-content">
                     <span className="card-title red-text">{this.props.book.title}</span>
                     <p>Author: {this.props.book.author}</p>  
-                    <button className="btn red" onClick={this.handleClick}>
+                    <button className="btn red delete" onClick={this.handleClick}>
                         Delete
                     </button>
+                    <NavLink className="btn purple update" role="button" to={"/" + this.props.book.id +"/update"}>
+                       Update
+                    </NavLink>
                 </div>
             </div> 
         ) : (

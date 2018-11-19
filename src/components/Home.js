@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 
 class Home extends Component {
     render(){
-        console.log(this.props.books)
+        //console.log(this.props.books)
         const { books } = this.props
         const bookList = books.length ? (
         books.map(book => {

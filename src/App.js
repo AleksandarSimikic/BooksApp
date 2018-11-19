@@ -6,6 +6,7 @@ import About from './components/About'
 import AddBook from './components/AddBook'
 import {Route, BrowserRouter, Switch } from 'react-router-dom'
 import Books from './components/Books'
+import UpdateBook from './components/UpdateBook'
 
 
 class App extends Component {
@@ -20,6 +21,7 @@ class App extends Component {
             <Route path='/about' component={About}/>
             <Route path='/help' component={Help}/>
             <Route path='/addbook' component={AddBook}/>
+            <Route path ='/:book_id/update' component={UpdateBook}/>
             <Route path ='/:book_id' component={Books}/>
           </Switch>
         </div>

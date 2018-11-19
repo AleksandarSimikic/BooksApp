@@ -12,3 +12,10 @@ export const addBook = (book) =>{
         book
     }
 }
+
+export const updateBook = (book) => {
+    return{
+        type: "UPDATE_BOOK",
+        book
+    }
+}
