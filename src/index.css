@@ -1,14 +1,53 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.nav-wrapper .topmenu img{
+  position: absolute;
+  top:10px;
+  left:0px;
+  opacity: 100;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+.nav-wrapper .topmenu .brand-logo{
+  position: absolute;
+  left: 55px;
+  font-weight: bolder;
+  font-family: fantasy;
+  fill-opacity: initial;
+}
+
+.shit .foot .footer-copyright{
+  position: relative;
+  bottom: -100px;
+  font-style: italic
+}
+
+
+.book .card-content .btn.delete{
+  position: absolute;
+  right: 20px;
+  bottom: 10px;
+  width: 15%
+}
+
+.book .card-content .btn.update{
+  position: absolute;
+  right: 20px;
+  bottom: 50px;
+  width: 15%
+}
+
+.addbook {
+  position: absolute;
+  border: 12px solid;
+  border-color: darkcyan;
+  border-radius: 10px;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  
+}
+.updateBook {
+  position: absolute;
+  border: 12px solid;
+  border-color: darkcyan;
+  border-radius: 10px;
+  margin-top: 30px;
+  margin-bottom: 15px;
 }
